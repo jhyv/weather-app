@@ -23,6 +23,9 @@ body{
 .font-gloria{
   font-family: 'Gloria';
 }
+.font-odachi{
+  font-family: 'Odachi';
+}
 
 .app-header{
   display:flex;
@@ -50,7 +53,7 @@ body{
 
   .app-actions
   {
-    .btn-explore{
+    .btn-signin{
       background-color: $red;
       color:#fff;
       padding: 8px 30px;

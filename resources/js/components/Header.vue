@@ -3,12 +3,12 @@
       <div class="app-logo">
           <a href="/">
             <img src="/imgs/sun.png">
-            <h2 class="mb-0 font-gloria">JAPAN</h2>
+            <h2 class="mb-0 font-odachi">日本</h2>
           </a>
       </div>
       <div class="app-actions">
-          <button class="btn-explore">
-              Explore
+          <button class="btn-signin">
+              Sign In
           </button>
       </div>
   </div>

@@ -22,6 +22,12 @@ $line-height-base: 1.6;
     src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Odachi";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/Odachi.woff") format("woff");
+}
 
 // Colors
 $blue: #3490dc;

@@ -2,16 +2,18 @@
 <div class="landing">
   <Header />
   <section class="hero">
-    <div class="row mx-0 justify-content-center">
-      <div class="col-lg-4 col-md-6">
+    <div class="row mx-0 justify-content-start w-100">
+      <div class="col-lg-6 col-md-6 front-text">
         <h1 id="title">JAPAN</h1>
-        <h3 class="text-white">Land of The Rising Sun</h3>
+        <h1 class="text-white sub-title">Land of The Rising Sun</h1>
+        <button class="btn-explore mt-4">
+          Explore
+        </button>
       </div>
-      <div class="col-lg-4">
-        <h3 class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis urna et odio facilisis, sit amet suscipit elit ornare. 
-          Integer sed scelerisque ante. Ut maximus augue quis turpis dignissim pellentesque. 
-          In et erat et orci efficitur pharetra. Mauris nec nibh urna. Etiam a quam sed libero vestibulum rhoncus. Sed maximus.</h3>
-      </div>
+    </div>
+      
+    <div class="circle-container" v-for="(i,index) in particleCnt" :key="index">
+      <div class="circle"></div>
     </div>
   </section>
 </div>  
@@ -22,11 +24,12 @@ import Header from '../components/Header.vue';
 
 export default {
   components:{
-    Header
+    Header,
   },
   data(){
     return{
-      places:''
+      places:'',
+      particleCnt:30,
     }
   },
   mounted(){
@@ -44,7 +47,7 @@ export default {
           this.places = response.data.data;
         }
       })
-    }
+    },
   }
 }
 </script>
