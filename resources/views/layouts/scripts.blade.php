@@ -1,2 +1,2 @@
 
-<script src="{{ asset('js/main.js') }}?v=1.0"></script>
+<script src="{{ asset('js/app.js') }}?v=1.0"></script>

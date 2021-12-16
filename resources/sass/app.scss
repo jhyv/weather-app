@@ -4,11 +4,59 @@
 
 // Variables
 @import 'variables';
+@import 'landing';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+body{
+  background: linear-gradient(0deg, #151617 30%,#203444 70%);
+}
+*{
+  font-family: 'Montserrat';
+}
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.font-gloria{
+  font-family: 'Gloria';
+}
+
+.app-header{
+  display:flex;
+  align-items: 'center';
+  justify-content: space-between;
+  padding:20px 50px;
+  width:100%;
+  position: sticky;
+  top:0;
+  .app-logo
+  {
+    a{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h2{
+      color: #fff;
+    }
+    img{
+      width: 30px;
+      margin-right: 1rem;
+    }
+  }
+
+  .app-actions
+  {
+    .btn-explore{
+      background-color: $red;
+      color:#fff;
+      padding: 8px 30px;
+      box-shadow: none;
+      border-radius: 40px;
+      border: 1px solid $red;
+    }
+  }
 }

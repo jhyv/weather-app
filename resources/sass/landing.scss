@@ -1,0 +1,19 @@
+div.landing{
+    background-image: url('../imgs/backgrounds/japan.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+section.hero{
+    width:100vw;
+    height:calc(100vh - 81px);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position:relative;
+}
+#title{
+    font-size: 7.3rem;
+    color: $red;
+    font-family: 'Gloria';
+}
