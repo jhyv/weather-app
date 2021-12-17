@@ -2,10 +2,10 @@
   <div class="full-page">
       <app-header></app-header>
       <section class="hero flex-column">
-          <h1 class="text-center text-white font-gloria">Visit different cities</h1>
+          <h1 class="text-center text-white font-gloria">Visit different places</h1>
           <hr class="bg-white mt-3">
           <div class="row">
-              <div class="col-lg-4 col-6" v-for="(city,index) in cities" @click="setActive(city,index)" :key="index">
+              <div class="col-lg-4 col-md-6 col-sm-12" v-for="(city,index) in cities" @click="setActive(city,index)" :key="index">
                   <CityCard v-bind="{_city:city}" />
               </div>
           </div>
