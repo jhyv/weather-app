@@ -1,3 +1,11 @@
+## Code Implmentation
+
+When using api calls with access keys or tokens we can directly use it in the front-end like javascript or Vuejs and get the same result. But by exposing it in the front end side will make the app and our accounts in api servers vulnerable. To avoid that I placed the api keys in the .env file where the environment variables are being stored I also place the api url there. So when using api calls the app sends the request from the laravel server then the server will be the one will use execute and receive the api result using the access keys stored in the environment variables, with that we can avoid security risks on using api calls.
+
+## Design Implementation
+
+In the designing the app I focused on what makes Japan known in the world which is "The Land of The Rising Sun". I also used three colors which are red, black and white for simplicity. The white and red color represents Japan and the black and red represent the city nights in japan.
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
