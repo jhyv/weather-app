@@ -7,9 +7,9 @@
           </a>
       </div>
       <div class="app-actions">
-          <button class="btn-signin">
+          <!-- <button class="btn-signin">
               Sign In
-          </button>
+          </button> -->
       </div>
   </div>
 </template>

@@ -32,6 +32,10 @@ class PlaceController extends Controller
 
         $http = new \GuzzleHttp\Client(['http_errors' => true]);
         $response = $http->get(env('FOUR_SQUARE_URL').'/'.$fsq_id.'/photos', [
+            'query' => [
+                'limit' => 1,
+                'sort' => 'popular'
+            ],
             'headers' => [
                 'Accept'     => 'application/json',
                 'Authorization' => env('FOUR_SQUARE_KEY')

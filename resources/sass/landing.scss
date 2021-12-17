@@ -39,6 +39,12 @@ section.hero{
     text-decoration: none;
 }
 
+@media (max-width: 750px) {
+    #title{
+      font-size: 4rem !important;
+    }
+}
+
 // PARTICLES
 
 $particleNum:50;

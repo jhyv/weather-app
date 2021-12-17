@@ -3,7 +3,7 @@
   <div class="city-bg">
       <app-header></app-header>
       <section class="city-box ">
-          <div class="container">
+          <div class="px-4">
             <div class="row justify-content-between">
                 <div class="col-lg-6 col-md-6 text-center">
                     <h3 class="font-odachi city-name typing-anim" v-if="selectedCity">{{ selectedCity.name }}</h3>
@@ -11,31 +11,31 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="white-card">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-3 weather-box" v-if="weather">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather">
                                 <h2>{{ weather.clouds.all }}%</h2>
                                 <i class="fa fa-cloud"></i>
                             </div>
-                            <div class="col-3 weather-box" v-if="weather">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather">
                                 <h2>{{ weather.main.temp }} C</h2>
                                 <i class="fa fa-temperature-low"></i>
                             </div>
-                            <div class="col-3 weather-box" v-if="weather">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather">
                                 <h2>{{ weather.main.feels_like }} &deg;C</h2>
                                 <i class="fa fa-male"></i>
                             </div>
-                            <div class="col-3 weather-box" v-if="weather">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather">
                                 <h2>{{ weather.main.humidity }}%</h2>
                                 <i class="fa fa-tint"></i>
                             </div>
-                            <div class="col-4 weather-box" v-if="weather">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather">
                                 <h2>{{ weather.wind.speed }} m/s</h2>
                                 <i class="fa fa-wind"></i>
                             </div>
-                            <div class="col-4 weather-box" v-if="weather && weather.main.grnd_level">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather && weather.main.grnd_level">
                                 <h2>{{ weather.main.grnd_level }} hPa</h2>
                                 <i class="fa fa-wind"></i>
                             </div>
-                            <div class="col-4 weather-box" v-if="weather && weather.main.sea_level">
+                            <div class="col-lg-3 col-md-3 col-sm-6 weather-box" v-if="weather && weather.main.sea_level">
                                 <h2>{{ weather.main.sea_level }} hPa</h2>
                                 <i class="fa fa-wind"></i>
                             </div>
@@ -48,9 +48,9 @@
 
           <!-- Places -->
           <div class="d-flex places-container">
-              <div class="col-6" v-for="(place,index) in places" :key="index">
-                  <div class="white-card mb-4">
-                      <h3 class="font-gloria">{{ place.name }}</h3>
+              <div class="col-lg-5 col-md-6 col-12" v-for="(place,index) in places" :key="index">
+                  <div class="white-card mb-4" :id="place.fsq_id">
+                      <h3 class="place-name">{{ place.name }}</h3>
                   </div>
               </div>
           </div>
@@ -112,7 +112,12 @@ export default {
                     // place.details = details.data;
 
                     let photos = await axios.get('/place/photos/'+place.fsq_id);
-                    place.photos = photos.data;
+                    place.photo = photos.data[0];
+                    $("#"+place.fsq_id).css({
+                        backgroundImage: 'url("'+place.photo.prefix+'original'+place.photo.suffix+'")',
+                        backgroundPosition: '50% 50%',
+                        backgroundSize: 'cover',
+                    })
                 }
             }
         },
@@ -172,9 +177,13 @@ export default {
         height: 200px;
         padding: 20px;
         background-color: rgba(255,255,255,0.7);
-        border-radius: 40px;
+        border-radius: 5px;
         .row{
             height:100%;
+        }
+        .place-name{
+            color:#fff;
+            text-shadow: 0px 3px 3px rgba(0,0,0,0.8);
         }
         .weather-box{
             display:flex;
@@ -195,9 +204,21 @@ export default {
     }
     .places-container{
         overflow-x: auto;
-
+        scrollbar-color: #d8350e #e0e0e0;
+       
         .white-card{
-            height: 400px;
+            height: calc(100vh - 500px);
+            padding:30px 20px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .city-name{
+            font-size: 4rem;
+        }
+
+        .weather-box h2, .weather-box i{
+            font-size:1.2rem !important;
         }
     }
 </style>
