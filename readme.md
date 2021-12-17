@@ -4,7 +4,7 @@ When using api calls with access keys or tokens we can directly use it in the fr
 
 ## Design Implementation
 
-In the designing the app I focused on what makes Japan known in the world which is "The Land of The Rising Sun". I also used three colors which are red, black and white for simplicity. The white and red color represents Japan and the black and red represent the city nights in japan.
+In designing the app I focused on what makes Japan known in the world which is "The Land of The Rising Sun". I also used three colors which are red, black and white for simplicity. The white and red color represents Japan and the black and red represent the city nights in japan.
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
