@@ -1,0 +1,33 @@
+[
+    {
+        "name":"Tokyo",
+        "image":"/imgs/backgrounds/tokyo.jpg",
+        "geolocation":[35.67,139.76]
+    },
+    {
+        "name":"Kyoto",
+        "image":"/imgs/backgrounds/kyoto.jpg",
+        "geolocation":[35.07, 135.78]
+    },
+    {
+        "name":"Nagoya",
+        "image":"/imgs/backgrounds/nagoya.jpg",
+        "geolocation":[35.30, 136.87]
+    },
+    {
+        "name":"Osaka",
+        "image":"/imgs/backgrounds/osaka.jpg",
+        "geolocation":[34.76, 135.64]
+    },
+    {
+        "name":"Sapporo",
+        "image":"/imgs/backgrounds/sapporo.jpg",
+        "geolocation":[43.12, 141.41]
+    },
+    {
+        "name":"Yokohama",
+        "image":"/imgs/backgrounds/yokohama.jpg",
+        "geolocation":[35.51, 139.61]
+    }
+
+]

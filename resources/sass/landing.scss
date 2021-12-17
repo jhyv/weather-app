@@ -18,9 +18,12 @@ section.hero{
     font-size: 7.3rem;
     color: $red;
     font-family: 'Gloria';
+    line-height: 1;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.3);
 }
 .sub-title{
     font-family: 'Odachi';
+    margin-bottom: 60px;
 }
 .font-text{
     z-index: 2;
@@ -33,6 +36,7 @@ section.hero{
     border-radius: 40px;
     border: 1px solid $red;
     font-size: 1.6rem;
+    text-decoration: none;
 }
 
 // PARTICLES
@@ -43,12 +47,11 @@ $particleNum:50;
     z-index: 1;
     $particleNum: 200;
     $particleColor: hsl(180, 100%, 80%);
-  
     position: absolute;
     transform: translateY(-10vh);
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  
+    transform:translate3d(0, 45vh ,0);
     .circle {
       width: 100%;
       height: 100%;
@@ -127,7 +130,7 @@ $particleNum:50;
       }
 
       .circle {
-        animation-delay: random(4000) + ms;
+        animation-delay: random(3000) + ms;
       }
     }
   }

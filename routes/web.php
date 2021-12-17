@@ -16,4 +16,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/places', 'PlaceController@getPlaces');
+Route::get('/places/list', 'PlaceController@getPlaces');
+Route::get('/places', 'PlaceController@placesPage');
+Route::get('/places/view', 'PlaceController@viewPlacePage');
+Route::get('/weather', 'PlaceController@getWeather');
+Route::get('/place/{fsq_id}','PlaceController@getPlaceDetails');
+Route::get('/place/photos/{fsq_id}','PlaceController@getPlacePhoto');

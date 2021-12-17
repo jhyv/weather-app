@@ -17,11 +17,8 @@
     </head>
     <body>
         @include('layouts.loader')
-        <div class="d-flex flex-column" id="app">
-            
-            <div class="main-content" id="panel">
+        <div id="app">
                 @yield('page-content')
-            </div>
         </div>
         
         @include('layouts.scripts')
